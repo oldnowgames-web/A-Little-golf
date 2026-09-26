@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>A Little Golf</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game-container">
+    
+    <!-- Botões Superiores -->
+    <button id="btn-fullscreen" class="top-btn" title="Tela Cheia">⛶</button>
+    <button id="btn-ingame-menu" class="top-btn hidden">☰ Menu</button>
+
+    <!-- Menu Inicial -->
+    <div id="start-screen" class="screen">
+        <h1>A Little Golf</h1>
+        <p class="subtitle">Arraste para mirar, solte para bater!</p>
+        <button id="btn-start">Jogar Agora</button>
+    </div>
+
+    <!-- Menu de Pausa / Fim de Rodada (In-Game) -->
+    <div id="pause-screen" class="screen hidden">
+        <h1 id="pause-title">Pausado</h1>
+        <p id="pause-info" class="subtitle"></p>
+        <button id="btn-resume">Continuar</button>
+        <button id="btn-restart">Reiniciar Jogo</button>
+    </div>
+
+    <!-- HUD (Interface Superior) -->
+    <div id="hud" class="hidden">
+        <div id="scoreDisplay">Acertos: 0</div>
+        <div id="strokesDisplay">Tacadas: 0</div>
+        <div id="timeDisplay">00:00</div>
+    </div>
+
+    <div id="success-msg">Ponto! +1</div>
+
+    <canvas id="golfCanvas"></canvas>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
